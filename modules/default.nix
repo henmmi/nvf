@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   ...
 }:
 {
@@ -72,7 +73,7 @@
     ui.colorful-menu-nvim.enable = true;
     clipboard = {
       enable = true;
-      providers.wl-copy.enable = true;
+      providers.wl-copy.enable = pkgs.stdenv.isLinux;
       registers = "unnamedplus";
     };
 

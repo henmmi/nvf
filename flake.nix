@@ -42,7 +42,6 @@
       darwinModules.default = mkModule nvf.darwinModules.default;
 
       # Standalone neovim, usable without NixOS:
-      #   nix run github:apekros/nvf
       packages = forAllSystems (pkgs: rec {
         neovim =
           (nvf.lib.neovimConfiguration {
