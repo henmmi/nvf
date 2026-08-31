@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   vim = {
+    extraPackages = with pkgs; [ oxfmt ];
+
     lsp = {
       enable = true;
       formatOnSave = true;
@@ -9,7 +11,6 @@
       lspconfig = {
         enable = true;
       };
-      presets.tailwindcss-language-server.enable = true;
       # Adds clear iconography layer to nvim completion ui.
       lspkind.enable = true;
       nvim-docs-view.enable = true;
@@ -42,6 +43,9 @@
           filetypes = [ "ron" ];
         };
 
+        "oxfmt" = {
+          enable = true;
+        };
       };
     };
 
@@ -111,22 +115,6 @@
 
       lua.lsp.lazydev.enable = true;
 
-      # Enable QML support.
-      qml = {
-        enable = true;
-        format = {
-          enable = true;
-          type = [ "qmlformat" ];
-        };
-        lsp = {
-          enable = true;
-          # servers = [ "qmlls" ];
-        };
-        # treesitter = {
-        #   enable = true;
-        # };
-      };
-
       # Enable javascript/typescript LSP.
       typescript = {
         enable = true;
@@ -165,18 +153,20 @@
         format.enable = false;
         lsp = {
           enable = true;
-          servers = [ "emmet-ls" ];
+          servers = [ ];
         };
         treesitter.enable = true;
       };
 
-      # Enable Svelete LSP.
-      # svelte = {
-      #   enable = true;
-      #   format.enable = true;
-      #   lsp.enable = true;
-      #   treesitter.enable = true;
-      # };
+      json = {
+        enable = true;
+        lsp = {
+          enable = true;
+          servers = [ ];
+        };
+        format.enable = false;
+        treesitter.enable = true;
+      };
 
       # Enable markdown LSP.
       markdown = {
@@ -202,12 +192,6 @@
         treesitter.enable = true;
       };
 
-      json = {
-        enable = true;
-        lsp.enable = false;
-        format.enable = false;
-        treesitter.enable = true;
-      };
     };
   };
 }
