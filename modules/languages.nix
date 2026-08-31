@@ -162,7 +162,7 @@
       # Enable Cascading Style Sheet LSP.
       css = {
         enable = true;
-        format.enable = true;
+        format.enable = false;
         lsp = {
           enable = true;
           servers = [ "emmet-ls" ];
@@ -204,8 +204,8 @@
 
       json = {
         enable = true;
-        lsp.enable = true;
-        format.enable = true;
+        lsp.enable = false;
+        format.enable = false;
         treesitter.enable = true;
       };
     };
