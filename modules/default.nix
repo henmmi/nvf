@@ -20,7 +20,7 @@
     syntaxHighlighting = true;
     theme = {
       enable = true;
-      name = lib.mkForce "onedark";
+      name = lib.mkForce "oxocarbon";
       style = "dark";
     };
 
@@ -87,7 +87,7 @@
 
     statusline.lualine = {
       enable = true;
-      theme = lib.mkForce "onedark";
+      theme = lib.mkForce "oxocarbon";
     };
 
     tabline.nvimBufferline = {
