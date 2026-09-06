@@ -73,7 +73,7 @@
     ui.colorful-menu-nvim.enable = true;
     clipboard = {
       enable = true;
-      providers.wl-copy.enable = pkgs.stdenv.isLinux;
+      providers.wl-copy.enable = pkgs.stdenv.hostPlatform.isLinux;
       registers = "unnamedplus";
     };
 

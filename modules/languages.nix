@@ -19,6 +19,8 @@
       # Show function signature when you type.
       lspSignature.enable = true;
 
+      presets.tailwindcss-language-server.enable = true;
+
       servers = {
         "taplo" = {
           enable = true;
@@ -153,7 +155,6 @@
         format.enable = false;
         lsp = {
           enable = true;
-          servers = [ ];
         };
         treesitter.enable = true;
       };
