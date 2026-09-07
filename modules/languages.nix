@@ -127,6 +127,8 @@
           servers = [ "typescript-go" ];
         };
         treesitter.enable = true;
+        extraDiagnostics.enable = true;
+        extensions.ts-error-translator.enable = true;
       };
 
       # Enable jsx/tsx LSP.
@@ -139,6 +141,7 @@
           servers = [ "typescript-go" ];
         };
         treesitter.enable = true;
+        extraDiagnostics.enable = true;
       };
 
       # Enable HTML LSP.
