@@ -128,7 +128,10 @@
         };
         treesitter.enable = true;
         extraDiagnostics.enable = true;
-        extensions.ts-error-translator.enable = true;
+        extensions.ts-error-translator = {
+          enable = true;
+          auto_attach = true;
+        };
       };
 
       # Enable jsx/tsx LSP.
