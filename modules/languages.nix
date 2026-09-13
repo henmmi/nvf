@@ -88,7 +88,8 @@
           opts = ''
             ['rust-analyzer'] = {
               cargo = {
-                allFeatures = true,
+                -- Keep feature-gated modules in rust-analyzer's crate graph.
+                features = "all",
               },
               checkOnSave = true,
               check = {
