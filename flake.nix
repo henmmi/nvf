@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nvf.url = "git+https://github.com/NotAShelf/nvf";
+    nvf.url = "git+https://github.com/NotAShelf/nvf?ref=release/26.07";
   };
 
   outputs =

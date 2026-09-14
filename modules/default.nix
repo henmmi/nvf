@@ -6,7 +6,7 @@
 {
   imports = [
     ./diagnostics.nix
-    ./languages.nix
+    ./languages
     ./telescope.nix
     ./autocomplete.nix
     ./utility.nix
