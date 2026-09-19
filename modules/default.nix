@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   ...
 }:
@@ -14,15 +13,12 @@
     ./keymap.nix
     ./formatter.nix
     ./plugins.nix
+    ./theme.nix
   ];
 
   vim = {
     syntaxHighlighting = true;
-    theme = {
-      enable = true;
-      name = lib.mkForce "oxocarbon";
-      style = "dark";
-    };
+    # Theme lives in ./theme.nix
 
     options = {
       # Terminal and Title Settings
@@ -87,7 +83,7 @@
 
     statusline.lualine = {
       enable = true;
-      theme = lib.mkForce "oxocarbon";
+      # theme set in ./theme.nix
     };
 
     tabline.nvimBufferline = {
