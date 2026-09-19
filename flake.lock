@@ -84,7 +84,20 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nvf": "nvf"
+        "nvf": "nvf",
+        "rust-analyzer-split": "rust-analyzer-split"
+      }
+    },
+    "rust-analyzer-split": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-XXsNSH22FDQqzNyXkmazct4PRORFYKnXoRFJLBwBgV8=",
+        "path": "/home/henry/rust-analyzer-split",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/henry/rust-analyzer-split",
+        "type": "path"
       }
     }
   },
