@@ -91,13 +91,17 @@
     "rust-analyzer-split": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-XXsNSH22FDQqzNyXkmazct4PRORFYKnXoRFJLBwBgV8=",
-        "path": "/home/henry/rust-analyzer-split",
-        "type": "path"
+        "lastModified": 1789339890,
+        "narHash": "sha256-ux+aG4gdU6JPKrX3s2XAjGZt0PlKGoc2Yu+sDgZsyHA=",
+        "ref": "refs/heads/main",
+        "rev": "d9e43e698e21859742f2a795fd5c38d03e593dc1",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/apekros/rust-analyzer-split"
       },
       "original": {
-        "path": "/home/henry/rust-analyzer-split",
-        "type": "path"
+        "type": "git",
+        "url": "ssh://git@github.com/apekros/rust-analyzer-split"
       }
     }
   },

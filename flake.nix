@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvf.url = "git+https://github.com/NotAShelf/nvf?ref=release/26.07";
     rust-analyzer-split = {
-      url = "path:/home/henry/rust-analyzer-split";
+      url = "git+ssh://git@github.com/apekros/rust-analyzer-split";
       flake = false;
     };
   };
