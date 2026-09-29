@@ -4,6 +4,7 @@
     ./rust.nix
     ./typescript.nix
     ./web.nix
+    ./dotnet.nix
   ];
 
   vim = {

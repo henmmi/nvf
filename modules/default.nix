@@ -14,6 +14,8 @@
     ./formatter.nix
     ./plugins.nix
     ./theme.nix
+    ./treesitter.nix
+    ./status_line.nix
   ];
 
   vim = {
@@ -73,29 +75,6 @@
       registers = "unnamedplus";
     };
 
-    treesitter = {
-      enable = true;
-      addDefaultGrammars = true;
-      highlight.enable = true;
-      # Treesitter indent is ON globally which uses indentexpr to calculate instead of native autoindent.
-      indent.enable = false;
-    };
-
-    statusline.lualine = {
-      enable = true;
-      # theme set in ./theme.nix
-    };
-
-    tabline.nvimBufferline = {
-      enable = true;
-      setupOpts = {
-        options = {
-          separator_style = "slant";
-          numbers = "none";
-          diagnostics = "nvim_lsp";
-        };
-      };
-    };
     autopairs.nvim-autopairs.enable = true;
 
     ui.borders.globalStyle = "rounded";
