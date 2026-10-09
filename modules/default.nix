@@ -1,12 +1,11 @@
 {
-  lib,
   pkgs,
   ...
 }:
 {
   imports = [
     ./diagnostics.nix
-    ./languages.nix
+    ./languages
     ./telescope.nix
     ./autocomplete.nix
     ./utility.nix
@@ -14,15 +13,14 @@
     ./keymap.nix
     ./formatter.nix
     ./plugins.nix
+    ./theme.nix
+    ./treesitter.nix
+    ./status_line.nix
   ];
 
   vim = {
     syntaxHighlighting = true;
-    theme = {
-      enable = true;
-      name = lib.mkForce "onedark";
-      style = "dark";
-    };
+    # Theme lives in ./theme.nix
 
     options = {
       # Terminal and Title Settings
@@ -77,29 +75,6 @@
       registers = "unnamedplus";
     };
 
-    treesitter = {
-      enable = true;
-      addDefaultGrammars = true;
-      highlight.enable = true;
-      # Treesitter indent is ON globally which uses indentexpr to calculate instead of native autoindent.
-      indent.enable = false;
-    };
-
-    statusline.lualine = {
-      enable = true;
-      theme = lib.mkForce "onedark";
-    };
-
-    tabline.nvimBufferline = {
-      enable = true;
-      setupOpts = {
-        options = {
-          separator_style = "slant";
-          numbers = "none";
-          diagnostics = "nvim_lsp";
-        };
-      };
-    };
     autopairs.nvim-autopairs.enable = true;
 
     ui.borders.globalStyle = "rounded";

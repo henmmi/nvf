@@ -32,21 +32,8 @@
     };
 
     startPlugins = [
-      "rustaceanvim"
       "nvim-dap"
     ];
-
-    # luaConfigRC.rustaceanvim = ''
-    #   server = {
-    #     settings = {
-    #       ["rust-analyzer" ] = {
-    #         checkOnSave = {
-    #           command = "clippy",
-    #         },
-    #       },
-    #     },
-    #   }
-    # '';
 
     extraPlugins = {
       treesitter-rust = {
@@ -57,17 +44,6 @@
       };
       ron-vim = {
         package = pkgs.vimPlugins.ron-vim;
-      };
-      neotest = {
-        package = pkgs.vimPlugins.neotest;
-        setup = ''
-          require('neotest').setup {
-            adapters = {
-                require('rustaceanvim.neotest')
-              },
-            }
-        '';
-        after = [ "rustaceanvim" ];
       };
     };
   };
