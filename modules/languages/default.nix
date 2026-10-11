@@ -5,6 +5,7 @@
     ./typescript.nix
     ./web.nix
     ./dotnet.nix
+    ./dart.nix
   ];
 
   vim = {
